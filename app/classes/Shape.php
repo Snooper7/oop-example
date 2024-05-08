@@ -2,10 +2,17 @@
 
 namespace App\classes;
 
+use App\interfaces\GetAreaInterface;
+use App\interfaces\GetPerimeterInterface;
+
 class Shape
 {
-    public function getShape(): string
+    protected string $color;
+
+    public function printInfo(): void
     {
-        return "shape!";
+        printf("Цвет: " . $color);
+        printf("Площадь: " . getArea());
+        printf("Периметр: " . getPerimeter());
     }
 }
